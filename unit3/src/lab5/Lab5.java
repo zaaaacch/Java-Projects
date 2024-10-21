@@ -22,21 +22,21 @@ public class Lab5 {
 				if(hasCoupon.equals("Y")) {
 					System.out.println("You have a coupon.");
 					System.out.println("Your total cost will be $" + compactPrice*0.93*daysRent);
-				} else if (hasCoupon.equals("N")) {
+				} else {
 					System.out.println("You do not have a coupon.");
 					System.out.println("Your total cost will be $" + compactPrice*daysRent);
 				};
-			} else if (sizeVehicle.equals("F")) {
+			} else {
 				System.out.println("You have requested a full-size car for " + daysRent + " day(s).");
 				if(hasCoupon.equals("Y")) {
 					System.out.println("You have a coupon.");
 					System.out.println("Your total cost will be $" + fullPrice*0.93*daysRent);
-				} else if (hasCoupon.equals("N")) {
+				} else {
 					System.out.println("You do not have a coupon.");
 					System.out.println("Your total cost will be $" + fullPrice*daysRent);
 				};
 			};
-		} else if (wantToRent.equals("N")) {
+		} else {
 			System.out.print("If you change your mind, please come back. Goodbye");
 		}
 		input.close();

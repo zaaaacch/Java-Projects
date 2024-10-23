@@ -25,6 +25,15 @@ public class LittleQuiz {
 			} else {
 				System.out.println("\nWhy do you even try at this point.");
 			}
+			System.out.print("\nQ3) Doug Stacy is a freak!\n\t1) true\n\t2) false\n\n> ");
+			response = input.nextInt();
+			if (response == 1) {
+				numCorrect ++;
+				System.out.println("\nGOAT STATUS !!!!!");
+			} else {
+				System.out.println("\nAre you serious?? Doug is the freakiest!");
+			}
+			System.out.println("You got " + numCorrect + " correct out of 3! Wonderful!!!!!!!!");
 		}
 	}
 }

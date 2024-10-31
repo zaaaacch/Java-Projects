@@ -7,6 +7,5 @@ public class Remainder {
 			System.out.println("The remainder when " + n + " is divided by 3 is " + n%3);
 			n++;
 		}
-
 	}
 }

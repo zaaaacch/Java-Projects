@@ -11,9 +11,13 @@ public class Divisors {
 		int d;
 		for (d = 2; d <= limit; d++) {
 			if(n % d == 0) {
-				System.out.print(d + " ");
 				break;
 			}
+		}
+		if (d <= limit) {
+			System.out.print("\n"+n+" is not a prime number");
+		} else {
+			System.out.print("\n"+n+" is a prime number");
 		}
 	}
 }

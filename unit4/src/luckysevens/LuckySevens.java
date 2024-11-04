@@ -5,6 +5,7 @@ public class LuckySevens {
 		Scanner in = new Scanner(System.in);
 		System.out.print("How many dollars do you have? ");
 		int userMoney = in.nextInt();
+		in.close();
 		int rolls = 0;
 		int maxMoney = userMoney;
 		int maxCount = 0;

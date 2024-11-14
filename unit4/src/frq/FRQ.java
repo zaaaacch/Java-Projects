@@ -4,27 +4,25 @@ public class FRQ {
 	
 	public static void longestStreak(String str)
 	{
-		int length = str.length();
-		String longLetter = "";
 		int longStreak = 1;
-		for (int i = 0; i < length - 1; i++)
+		char longLetter = str.charAt(0);
+		int currentStreak = 1;
+		char currentLetter = str.charAt(0);
+		for (int i = 1; i < str.length(); i++)
 		{
-			int currentStreak = 1;
-			String letter = str.substring(i, i+1);
-			String nextLetter = str.substring(i+1, i+2);
-			while (i + 1 < length && letter.equals(nextLetter))
+			if (str.charAt(i) == currentLetter)
 			{
 				currentStreak++;
-				i++;
-				if (i + 1 < length)
-				{
-					nextLetter = str.substring(i+1, i+2);
-				}
 			}
-			if (currentStreak > longStreak) 
+			else
+			{
+				currentLetter = str.charAt(i);
+				currentStreak = 1;
+			}
+			if (currentStreak > longStreak)
 			{
 				longStreak = currentStreak;
-				longLetter = letter;
+				longLetter = currentLetter;
 			}
 		}
 		System.out.print(longStreak + " " + longLetter);

@@ -42,5 +42,4 @@ public class Anagram {
 		}
 		return result;
 	}
-
 }

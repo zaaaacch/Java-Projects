@@ -1,6 +1,6 @@
-package lowercase;
+package removenonletters;
 
-public class Lowercase {
+public class RemoveNonLetters {
 	public static String nonLetters(String str) {
 		int len = str.length();
 		String result = "";

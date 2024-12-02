@@ -11,10 +11,12 @@ public class AnagramTester {
 		System.out.print("Enter your second string: ");
 		String str2 = input.nextLine();
 		
+		input.close();
 		if (Anagram.validAnagram(str1, str2)) {
 			System.out.println(str1 + " and " + str2 + " are anagrams");
 		} else {
 			System.out.println(str1 + " and " + str2 + " are not anagrams");
 		}
+		
 	}
 }

@@ -76,14 +76,7 @@ public class Student {
 	}
 	// toString method
 	public String toString() {
-		return "Name:\t\t" + StudentName + "\nTest 1:\t\t" + TestScore1 + "\nTest 2:\t\t" + TestScore2 + "\nTest 3:\t\t" + TestScore3 + "\nAverage\t\t" + getAvg();
-	}
-	
-	public static void main(String[] args) {
-		Student s1 = new Student("Andrew", 94, 86, 90);
-		System.out.println(s1.getName());
-		System.out.println(s1.getAvg());
-		System.out.println(s1.getHighTest());
+		return "Name:\t\t" + StudentName + "\nTest 1:\t\t" + TestScore1 + "\nTest 2:\t\t" + TestScore2 + "\nTest 3:\t\t" + TestScore3 + "\nAverage:\t" + getAvg();
 	}
 }
 

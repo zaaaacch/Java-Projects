@@ -47,6 +47,17 @@ public class Fraction {
 		return new Fraction(num, den);
 	}
 	
+	public Fraction simplify() {
+		int nHalf = num / 2;
+		for (int i = 2; i <= nHalf; i++) {
+			if (num % i == 0 && den % i == 0) {
+				num /= i;
+				den /= i;
+			}
+		}
+		return new Fraction(num, den);
+	}
+	
 	// toString() method
 	public String toString() {
 		return num + "/" + den;

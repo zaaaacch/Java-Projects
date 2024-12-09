@@ -15,6 +15,5 @@ public class FractionTester {
 		System.out.println(twoThirds.simplify());
 		Fraction helo = new Fraction(17, (4*17));
 		System.out.println(helo.simplify());
-		
 	}
 }

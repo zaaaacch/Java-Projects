@@ -59,7 +59,7 @@ public class ShoppingCart {
 		// loops through the array to find the passed in value
 		for (int i = 0; i <= logicalSize; i++) {
 			// if value is found
-			if (a[i] == value) {
+			if (Math.abs(a[i] - value) <= 0.001) {
 				removeValue(a, logicalSize, i);
 				return true;
 			}

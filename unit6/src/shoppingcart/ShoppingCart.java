@@ -43,13 +43,27 @@ public class ShoppingCart {
 			return true;
 		}
 	}
-//	// a void method to remove values from a specific location in an array
-//	public static void removeValue(double[] a, int logicalSize, int loc) {
-//		
-//	}
-//	// a method to remove a specific value from an array, returns true if removed, false if could not be found
-//	public static boolean removeValue(double[] a, int logicalSize, double value) {
-//		
-//	}
-//	
+	// a void method to remove values from a specific location in an array
+	public static void removeValue(double[] a, int logicalSize, int loc) {
+		// removes the specified value
+		a[loc] = 0;
+		for (int i = loc + 1; i <= logicalSize; i++) {
+			// stores the current value
+			double ahead = a[i];
+			// sets the last value to the current value
+			a[i-1] = ahead;
+		}
+	}
+	// a method to remove a specific value from an array, returns true if removed, false if could not be found
+	public static boolean removeValue(double[] a, int logicalSize, double value) {
+		// loops through the array to find the passed in value
+		for (int i = 0; i <= logicalSize; i++) {
+			// if value is found
+			if (a[i] == value) {
+				removeValue(a, logicalSize, i);
+				return true;
+			}
+		}
+		return false;
+	}
 }

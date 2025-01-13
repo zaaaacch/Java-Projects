@@ -11,8 +11,12 @@ public class ShoppingCartTester {
 		ShoppingCart.list(cart, logicalSize);
 		System.out.printf("The total cost of your items is $%.2f \n\n", ShoppingCart.total(cart, logicalSize));
 		System.out.printf("With 5 percent tax added the total cost is $%.2f\n\n", ShoppingCart.withTax(cart, logicalSize));
-		ShoppingCart.insertValue(cart, logicalSize, 3, 333);
-		logicalSize++;
+		// ShoppingCart.insertValue(cart, logicalSize, 3, 333);
+		// logicalSize++;
+		ShoppingCart.list(cart, logicalSize);
+		System.out.print("\n");
+		ShoppingCart.removeValue(cart, logicalSize, 3.0);
+		logicalSize--;
 		ShoppingCart.list(cart, logicalSize);
 	}
 }

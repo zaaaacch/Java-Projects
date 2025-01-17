@@ -14,12 +14,13 @@ public class Scoreboard {
 	}
 	
 	public void recordPlay(int pts) {
+		if (pts == 0) {
+			t1Active = !t1Active;
+		}
 		if (t1Active) {
 			t1Score+= pts;
-			t1Active = false;
 		} else {
 			t2Score+= pts;
-			t1Active = true;
 		}
 	}
 	

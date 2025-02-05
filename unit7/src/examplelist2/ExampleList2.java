@@ -43,7 +43,7 @@ public class ExampleList2 {
 		pets.set(1, "iguana");
 		System.out.println(pets);
 		// The iguana ran away!
-		pets.remove(1);
+		pets.remove("iguana");
 		// Lion added to the end
 		pets.add("lion");
 		// Adds a zebra, cat, and bird, to a random position within the list

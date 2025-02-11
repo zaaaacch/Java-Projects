@@ -7,16 +7,13 @@ public class SortingAlgs {
 		int pts = 0;
 		String ans = "";
 		String algorithmName = "";
+		String keepPlaying = "";
 		Scanner input = new Scanner(System.in);
-		
-		for (int i = 0; i < a.length; i++) {
-			a[i] = (int) (Math.random() * 100);
-		}
-		
 		
 		System.out.print("Welcome to Sort Guessing! Type 1 to continue >> ");
 		if (input.nextLine().equals("1")) {
 			while (true) {
+				randomizeArray(a);
 				System.out.println();
 				if (rand == 1) {
 					selectionSort(a);
@@ -36,14 +33,26 @@ public class SortingAlgs {
 				System.out.print("What sorting algorithm was used?\na. Selection Sort\tb. Bubble Sort\tc. Insertion Sort\n>> ");
 				String resp = input.nextLine();
 				if (resp.equals(ans)) {
-					System.out.print("Correct! The algorithm was " + algorithmName);
+					System.out.println("Correct! The algorithm was " + algorithmName);
 					pts++;
 				} else {
-					System.out.print("Nope! The correct algorithm was " + algorithmName);
+					System.out.println("Nope! The correct algorithm was " + algorithmName);
+				}
+				System.out.print("Play again? Y/n\n>> ");
+				keepPlaying = input.nextLine();
+				if (keepPlaying.equals("n")) {
+					System.out.println("Thanks for playing! Your score was " + pts);
+					break;
 				}
 			}
 		}
 		
+	}
+	
+	public static void randomizeArray(int[] a) {
+		for (int i = 0; i < a.length; i++) {
+			a[i] = (int) (Math.random() * 100);
+		}
 	}
 	
 	public static void list(int[] array) {

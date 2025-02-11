@@ -41,7 +41,7 @@ public class SortingAlgs {
 				System.out.print("Play again? Y/n\n>> ");
 				keepPlaying = input.nextLine();
 				if (keepPlaying.equals("n")) {
-					System.out.println("Thanks for playing! Your score was " + pts);
+					System.out.print("Thanks for playing! Your score was " + pts);
 					break;
 				}
 			}

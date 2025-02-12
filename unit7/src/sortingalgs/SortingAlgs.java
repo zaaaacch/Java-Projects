@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class SortingAlgs {
 	public static void main(String[] args) {
 		int[] a = new int[10];
-		int rand = (int) (Math.random() * 4) + 1;
+		int rand = 0;
 		int pts = 0;
 		String ans = "";
 		String algorithmName = "";
@@ -13,6 +13,7 @@ public class SortingAlgs {
 		System.out.print("Welcome to Sort Guessing! Type 1 to continue >> ");
 		if (input.nextLine().equals("1")) {
 			while (true) {
+				rand = (int) (Math.random() * 4) + 1;
 				randomizeArray(a);
 				System.out.println();
 				if (rand == 1) {
@@ -148,12 +149,12 @@ public class SortingAlgs {
 				else {
 					stillLooking = false;
 				}
-			// Moves on to the next array element
-			itemToInsert = array[j+1];
+				// Moves on to the next array element
+				itemToInsert = array[j+1];
+			}
 			System.out.println("After pass number " + k + " the array looks like ");
 			list(array);
 			System.out.println();
-			}
 		}
 	}
 }

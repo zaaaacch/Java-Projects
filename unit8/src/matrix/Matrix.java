@@ -148,9 +148,7 @@ public class Matrix {
 	public Matrix multiply(Matrix b) {
 		Matrix result = new Matrix(this.getRows(), b.getCols(), false);
 		for (int row = 0; row < this.getRows(); row++) {
-			
 			for (int col = 0; col < b.getCols(); col++) {
-				
 				for (int k = 0; k < this.getCols(); k++) {
 					result.setEntry(row, col, result.getEntry(row, col) + this.getEntry(row, k) * b.getEntry(k, col));
 				}
